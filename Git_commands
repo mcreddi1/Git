@@ -1,0 +1,67 @@
+git_commands = """
+1. Git Configuration:
+   git config --global user.name "Your Name"      # Set your name for all repositories
+   git config --global user.email "you@example.com"  # Set your email for all repositories
+   git config --list                             # List all current configuration settings
+
+2. Git Repository Initialization:
+   git init                                      # Initialize a new Git repository
+   git clone <REPO_URL>                          # Clone a repository to your local machine
+
+3. Git Basic Operations:
+   git status                                    # Check the status of your working directory
+   git add <FILE>                                # Add a file to the staging area
+   git add .                                     # Add all changes to the staging area
+   git commit -m "Commit message"                # Commit changes with a message
+   git commit --amend                            # Modify the last commit
+   git diff                                      # Show differences between working directory and index
+   git diff --staged                             # Show differences between staging area and last commit
+
+4. Git Branching and Merging:
+   git branch                                    # List all branches
+   git branch <BRANCH_NAME>                      # Create a new branch
+   git checkout <BRANCH_NAME>                    # Switch to a branch
+   git checkout -b <BRANCH_NAME>                 # Create and switch to a new branch
+   git merge <BRANCH_NAME>                       # Merge a branch into the current branch
+   git branch -d <BRANCH_NAME>                   # Delete a branch
+   git stash                                     # Stash changes in a dirty working directory
+   git stash pop                                 # Apply stashed changes
+
+5. Git Remote Repositories:
+   git remote -v                                 # List all remotes
+   git remote add <REMOTE_NAME> <REMOTE_URL>     # Add a new remote repository
+   git fetch <REMOTE_NAME>                       # Fetch changes from a remote repository
+   git pull <REMOTE_NAME> <BRANCH_NAME>          # Fetch and merge changes from a remote branch
+   git push <REMOTE_NAME> <BRANCH_NAME>          # Push local changes to a remote branch
+
+6. Git Log and History:
+   git log                                       # Show commit logs
+   git log --oneline                             # Show concise commit logs
+   git log --graph --oneline --all               # Visualize the commit history as a graph
+   git show <COMMIT_HASH>                        # Show details of a specific commit
+
+7. Undoing Changes:
+   git checkout <FILE>                           # Undo changes in a file (restore from last commit)
+   git reset HEAD <FILE>                         # Unstage a file from the staging area
+   git reset --soft <COMMIT_HASH>                # Move HEAD to a previous commit, but keep changes staged
+   git reset --hard <COMMIT_HASH>                # Reset to a previous commit and discard all changes
+
+8. Git Tags:
+   git tag                                       # List all tags
+   git tag <TAG_NAME>                            # Create a new tag
+   git push origin <TAG_NAME>                    # Push a tag to the remote repository
+
+9. Git Rebase:
+   git rebase <BRANCH_NAME>                      # Reapply commits on top of another branch
+   git rebase --continue                         # Continue a rebase after resolving conflicts
+   git rebase --abort                            # Abort a rebase and return to the previous state
+
+10. Git Cherry-pick:
+   git cherry-pick <COMMIT_HASH>                 # Apply the changes from a specific commit to the current branch
+
+11. Git Aliases (Customization):
+   git config --global alias.st status           # Set 'git st' as an alias for 'git status'
+   git config --global alias.co checkout         # Set 'git co' as an alias for 'git checkout'
+   git config --global alias.br branch           # Set 'git br' as an alias for 'git branch'
+   git config --global alias.ci commit           # Set 'git ci' as an alias for 'git commit'
+"""
